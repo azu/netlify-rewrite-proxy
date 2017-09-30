@@ -1,0 +1,27 @@
+{
+  "name": "netlify-rewrite-proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "now": {
+    "alias": "netlify-rewrite-proxy-ddxfwwgnff"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azu/netlify-rewrite-proxy.git"
+  },
+  "keywords": [],
+  "author": "azu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/azu/netlify-rewrite-proxy/issues"
+  },
+  "homepage": "https://github.com/azu/netlify-rewrite-proxy#readme",
+  "dependencies": {
+    "express": "^4.16.1",
+    "now-logs": "0.0.7"
+  }
+}
