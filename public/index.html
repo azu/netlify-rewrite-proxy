@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="./css/styles.css" media="screen"/>
+</head>
+<body>
+<h3>Input</h3>
+<form id="input-form">
+    <label>
+        Query:<input id="input-query" type="text" name="query" style="width:500px;"/>
+    </label>
+</form>
+<h3>Proxy output:</h3>
+<textarea data-proxy-output style="width:500px;height:200px;"></textarea>
+<script>
+    function submit(query) {
+        var xhr = new XMLHttpRequest();
+        xhr.onload = function() {
+            if (xhr.readyState === 4) {
+                document.querySelector('[data-proxy-output]').innerText = xhr.responseText;
+            }
+        };
+        xhr.open('GET', '/api/' + query);
+        xhr.send();
+    }
+
+    document.querySelector("#input-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        var query = document.querySelector("#input-query").value;
+        submit(query);
+    })
+</script>
+</body>
+</html>
