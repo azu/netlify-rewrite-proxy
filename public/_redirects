@@ -1,5 +1,3 @@
 /api/*  https://netlify-rewrite-proxy-ddxfwwgnff.now.sh/:splat  200
-/api301/*  https://netlify-rewrite-proxy-ddxfwwgnff.now.sh/:splat  301
-/api302/*  https://netlify-rewrite-proxy-ddxfwwgnff.now.sh/:splat  302
 /q id=:id  https://netlify-rewrite-proxy-ddxfwwgnff.now.sh/id=:id  200
 /path id=:id  https://netlify-rewrite-proxy-ddxfwwgnff.now.sh/:id  200
