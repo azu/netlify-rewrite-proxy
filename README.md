@@ -123,7 +123,7 @@ For Example
 to be
 
 ```
-encodeURIComponent(`/api/0/stream/contents/${feedId}`)
+encodeURIComponent(`/api/0/stream/contents/${feedId}`).replace(/%3F/g, "%253F").replace(/%26/g, "%2526")
 ```
 
 Work fine. But I don't know the reason.
