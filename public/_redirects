@@ -2,4 +2,4 @@
 /api301/*  https://hookb.in/vDkXGDXQ?:splat  301
 /api302/*  https://hookb.in/vDkXGDXQ?:splat  302
 /q id=:id  https://hookb.in/vDkXGDXQ?id=:id  200
-/q query=:query  https://hookb.in/vDkXGDXQ?:query  200
+/path id=:id  https://hookb.in/vDkXGDXQ?:id  200
