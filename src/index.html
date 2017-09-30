@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/styles.css" media="screen" />
+  </head>
+  <body>
+    <h3>Proxy output:</h3>
+    <textarea data-proxy-output style="width:500px;height:200px;"></textarea>
+    <h3>SMS link</h3>
+    <ul>
+      <li><a href="sms:6049999999">Phone Only</a></li>
+      <li><a href="sms:6049999999?body=tag%2312345++">Android</a></li>
+      <li><a href="sms:6049999999;body=tag%2312345++">iOS</a></li>
+      <li><a href="sms:6049999999&body=tag%2312345++">iOS 8+</a></li>
+    </ul>
+    <p><a href="https://developer.apple.com/library/ios/featuredarticles/iPhoneURLScheme_Reference/SMSLinks/SMSLinks.html">https://developer.apple.com/library/ios/featuredarticles/iPhoneURLScheme_Reference/SMSLinks/SMSLinks.html</a>
+    <p><a href="http://stackoverflow.com/a/19126326/188740">http://stackoverflow.com/a/19126326/188740</a>
+    <p><a href="http://stackoverflow.com/q/31386732/188740">http://stackoverflow.com/q/31386732/188740</a>
+    <h3>Tel link</h3>
+    <ul>
+      <li><a href="tel:1-604-999-9999">1-604-999-9999</a></li>
+    </ul>
+    <script>
+      (function() {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4)
+              document.querySelector('[data-proxy-output]').innerText = xhr.responseText;
+        }
+        xhr.open('GET', '/rest/v1.0/jobcategories');
+        xhr.send();
+      }());
+    </script>
+  </body>
+</html>
