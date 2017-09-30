@@ -70,9 +70,7 @@ Twice escape `?` and `&`
 - `test%3Ftest` => `test%253FFtest`
 
 ```js
-const requestURL = encodeURIComponent(apiURL)
-    .replace(/%3F/g, "%253F")
-    .replace(/%26/g, "%2526")        
+const requestURL = encodeURIComponent(encodeURIComponent(apiURL))
 ```
 
 
