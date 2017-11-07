@@ -1,5 +1,9 @@
 # Netlify rewrite rule bug
 
+Official docs: [Redirect & Rewrite rules | Netlify](https://www.netlify.com/docs/redirects/ "Redirect &amp; Rewrite rules | Netlify")
+
+## Bug case
+
 `_redirects` rules is following
 
 ```
